@@ -27,4 +27,11 @@ void main() {
     expect(SingleLinkedList.withValues([3, 4, 5]).findIndex(4), equals(1));
     expect(SingleLinkedList.withValues(['foo', 'bar']).findIndex('hello'), equals(-1));
   });
+
+  test('SingleLinkedList Reverse', () {
+    expect(SingleLinkedList.withValues([3, 4, 5]).reverse(), isNotNull);
+    expect(SingleLinkedList.withValues([3, 4, 5]).reverse().root?.value, equals(5));
+    expect(SingleLinkedList.withValues([3, 4, 5]).reverse().root?.next?.value, equals(4));
+    expect(SingleLinkedList.withValues([3, 4, 5]).reverse().root?.next?.next?.value, equals(3));
+  });
 }

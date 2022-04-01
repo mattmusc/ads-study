@@ -71,4 +71,11 @@ class SingleLinkedList<T> {
 
       return -1;
     }
+
+    /// Reverse the linked list
+    SingleLinkedList reverse() {
+      // TODO
+
+      return this;
+    }
 }
