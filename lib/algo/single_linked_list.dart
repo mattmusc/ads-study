@@ -14,7 +14,10 @@ class SingleLinkedList<T> {
     /// Creates a linked list with a single node
     SingleLinkedList.withNode(this.root);
 
-    /// Creates a linked list from a list of value
+    /// Creates a linked list with a single value
+    SingleLinkedList.withValue(T value): root = Node(value);
+
+    /// Creates a linked list from a list of values
     SingleLinkedList.withValues(List<T> values) {
       if (values.length > 0) {
         T firstValue = values[0];
