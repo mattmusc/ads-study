@@ -34,4 +34,41 @@ class SingleLinkedList<T> {
         }
       }
     }
+
+    /// Returns the node with the value passed or null if the node was not found
+    Node<T>? findNode(T value) {
+      if (this.root == null) {
+        return null;
+      }
+
+      Node<T> current = this.root!;
+      while (current.next != null) {
+        if (current.value == value) {
+          return current;
+        }
+        current = current.next!;
+      }
+
+      return null;
+    }
+
+    /// Returns the index of the node with the value passed or -1 if the node was not found
+    int findIndex(T value) {
+      if (this.root == null) {
+        return -1;
+      }
+
+      int index = 0;
+      Node<T> current = this.root!;
+
+      while (current.next != null) {
+        if (current.value == value) {
+          return index;
+        }
+        current = current.next!;
+        index += 1;
+      }
+
+      return -1;
+    }
 }
